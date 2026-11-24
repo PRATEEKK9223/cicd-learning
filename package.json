@@ -1,0 +1,9 @@
+{
+    "name": "cicd-learning",
+    "version": "1.0.0",
+    "description": "Learning CI/CD using GitHub Actions",
+    "main": "src/app.js",
+    "scripts": {
+        "test": "node --test"
+    }
+}
