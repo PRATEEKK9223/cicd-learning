@@ -1,0 +1,37 @@
+
+name: My First CI Pipeline
+
+# When should this workflow execute?
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+
+# Jobs to execute
+jobs:
+  first-job:
+    name: My First Job
+
+    # Machine that executes the job
+    runs-on: ubuntu-latest
+
+    # Individual tasks
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Display Welcome Message
+        run: echo "Hello! My first CI pipeline is running."
+
+      - name: Display Current Directory
+        run: pwd
+
+      - name: Display Files
+        run: ls -la
+
+      - name: Check Git Version
+        run: git --version
